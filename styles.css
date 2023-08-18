@@ -1,0 +1,115 @@
+/* Reset some default styles */
+body, h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Global styles */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+/* Header styles */
+.header {
+  background-color: #292b3a;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.logo {
+  font-size: 28px;
+}
+
+.nav {
+  margin-top: 10px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #ff6dff;
+}
+
+/* Hero section styles */
+.hero {
+  background-image: url('hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 120px 0;
+}
+
+.hero-title {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.hero-text {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #292b3a;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #ff6dff;
+}
+
+/* Section styles */
+.section {
+  background-color: white;
+  padding: 60px 0;
+}
+
+.section-title {
+  font-size: 30px;
+  color: #292b3a;
+  margin-bottom: 15px;
+}
+
+.section-text {
+  font-size: 18px;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Footer styles */
+.footer {
+  background-color: #292b3a;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Product grid styles */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
