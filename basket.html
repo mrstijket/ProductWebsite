@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <title>About Us - Your Technology Store</title>
+  <title>Your Basket - Your Technology Store</title>
 </head>
 <body>
   <header class="header">
@@ -18,14 +18,18 @@
     </nav>
   </header>
 
-  <section id="about" class="section">
+  <section id="basket" class="section">
     <div class="content">
-      <h2 class="section-title">About Us</h2>
-      <p class="section-text">At Your Technology Store, we're passionate about...</p>
+      <h2 class="section-title">Your Basket</h2>
+      <div id="basket-items" class="basket-items">
+        <!-- Basket items will be added here using JavaScript -->
+      </div>
+      <button id="checkout-btn" class="btn btn-primary">Checkout</button>
     </div>
   </section>
 
   <!-- Other sections and footer here -->
 
+  <script src="basket.js"></script> <!-- Add script for basket functionality -->
 </body>
 </html>
