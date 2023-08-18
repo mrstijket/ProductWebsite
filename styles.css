@@ -41,7 +41,6 @@ body {
 
 /* Hero section styles */
 .hero {
-  background-image: url('hero-bg.jpg');
   background-size: cover;
   background-position: center;
   color: white;

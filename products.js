@@ -1,5 +1,6 @@
-let basket = require('basket.js');
-const addToBasketButtons = document.querySelectorAll('.add-to-basket-btn');
+const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+
+const cart = [];
 
 const products = [
   { id: 1, name: 'Smartphone XYZ', price: 599.99 },
@@ -11,15 +12,18 @@ const products = [
   // Add more products as needed
 ];
 
-// Handle "Add to Basket" button click
-addToBasketButtons.forEach(button => {
+// Handle "Add to Cart" button click
+addToCartButtons.forEach(button => {
   button.addEventListener('click', event => {
     const productId = parseInt(event.target.dataset.productId);
     const productToAdd = products.find(product => product.id === productId);
 
     if (productToAdd) {
-      basket.push(productToAdd);
-      alert(`${productToAdd.name} added to your basket!`);
+      cart.push(productToAdd);
+      alert(`${productToAdd.name} added to your cart!`);
     }
   });
 });
+
+
+//module.exports = {cart};
