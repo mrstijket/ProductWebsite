@@ -3,6 +3,7 @@ import {cart} from './products.js';
 const cartItemsElement = document.getElementById('cart-items');
 const cartTotalElement = document.getElementById('cart-total');
 const checkoutButton = document.getElementById('checkout-button');
+const clearButton = document.getElementById('clear-cart-button');
 const cartModal = document.getElementById('cart-modal');
 
 
@@ -32,14 +33,27 @@ function updateCartDisplay() {
   cartTotalElement.textContent = `$${total.toFixed(2)}`;
 }
 
+function clearCart() {
+  cart.length = 0; // Empty the cart array
+  localStorage.removeItem('cart'); // Remove cart data from localStorage
+  updateCartDisplay(); // Update the cart display
+}
+
 // Show cart modal when the checkout button is clicked
 checkoutButton.addEventListener('click', () => {
-  cartModal.style.display = 'block';
+  cartModal.style.display = 'none';
 });
+
+clearButton.addEventListener('click', () => {
+  clearCart();
+  cartModal.style.display = 'none';
+});
+
+
 
 // Close cart modal when clicking outside the modal
 window.addEventListener('click', event => {
   if (event.target === cartModal) {
-    cartModal.style.display = 'none';
+    cartModal.style.display = 'flex';
   }
 });
